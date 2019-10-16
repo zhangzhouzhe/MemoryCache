@@ -53,6 +53,7 @@ namespace MemoryCache
         internal void SetExpired(EvictionsReason reason)
         {
             _isExpired = true;
+            DetachTokens();
 
         }
         private void DetachTokens()
